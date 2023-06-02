@@ -15,7 +15,7 @@ class Card extends React.Component {
         this.closeCard = this.closeCard.bind(this);
         let isFav = false;
         this.handleFavorite = this.handleFavorite.bind(this);
-        this.props.myFavorites.forEach((fav) => {
+        this.props.myFavorites?.forEach((fav) => {
             if (fav.id === props.id) {
                 isFav = true;
             };
@@ -93,7 +93,7 @@ class Card extends React.Component {
 
                             <h2 className="characterName">
                                 <span>
-                                {this.props.name.toUpperCase()}
+                                    {this.props.name.toUpperCase()}
                                 </span>
                             </h2>
 

@@ -98,7 +98,7 @@ function App() {
     };
 
     async function clearAllCharacters() {
-        characters.forEach((c) => onClose(c.id));
+        characters?.forEach((c) => onClose(c.id));
     };
 
     return (

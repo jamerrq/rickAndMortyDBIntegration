@@ -11,6 +11,8 @@ module.exports = (sequelize) => {
             allowNull: false,
             // Es la PK
             primaryKey: true,
+            // Se autoincrementa
+            autoIncrement: true,
         },
         // email
         email: {

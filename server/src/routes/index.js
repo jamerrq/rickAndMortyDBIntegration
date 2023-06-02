@@ -2,25 +2,21 @@
 // Dentro de este deberás importar todos tus controladores.
 const getCharById = require('../controllers/getCharById');
 const login = require('../controllers/login');
-const { postFav, deleteFav } = require('../controllers/handleFavorites');
-
+const postFav = require('../controllers/postFav');
+const deleteFav = require('../controllers/deleteFav');
+const postUser = require('../controllers/postUser');
 
 // También deberás importar la función Router de express.
 const { Router } = require('express');
-
-
-// Crea una ruta para cada controlador con los siguientes paths:
-//     - GET getCharById: '/character/:id'
-//     - GET login: '/login'
-//     - POST postFav: '/fav'
-//     - DELETE deleteFav: '/fav/:id'
-
 const router = Router();
 
+
+// Update routes
 router.get('/character/:id', getCharById);
 router.get('/login', login);
-router.post('/fav/', postFav);
-router.delete('/fav/:id', deleteFav);
+router.post('/login', postUser);
+router.post('/favorite', postFav);
+router.delete('/favorite/:id', deleteFav);
 
 
 // Finalmente exporta tu router.

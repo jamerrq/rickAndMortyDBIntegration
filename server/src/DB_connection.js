@@ -11,7 +11,7 @@ const sequelize = new Sequelize(
     // URL
     `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`,
     // Configuración
-    { logging: false, native: false }
+    { logging: false, native: false, omitNull: true }
 );
 
 // EJERCICIO 05

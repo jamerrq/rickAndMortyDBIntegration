@@ -79,7 +79,7 @@ class Favorites extends React.Component {
                     </div>
                 </nav>
                 <div className='cardsFavs'>
-                    {this.props.myFavorites.map(element =>
+                    {this.props.myFavorites?.map(element =>
                         <Card
                             id={element.id}
                             key={element.id}
