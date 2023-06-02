@@ -6,6 +6,10 @@ const router = require('./routes/index');
 // Server
 const server = express();
 
+// Morgan
+const morgan = require('morgan');
+server.use(morgan('dev'));
+
 
 // Agregar middleware.
 server.use((req, res, next) => {
